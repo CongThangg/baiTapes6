@@ -33,4 +33,11 @@ let changeColor = (color) => {
     document.querySelector("#house").className= `house ${color}`;
 }
 
+document.addEventListener('click',function(event){
+    document.querySelectorAll('button').forEach(item => {
+        item.classList.remove('active');
+        event.target.classList.add('active');
+    });
+})
+
 
